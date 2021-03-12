@@ -16,5 +16,8 @@ class UserController{
         await userRepository.save(user);
         return res.status(200).json(user);
     }
+    async index(req: Request, res: Response){
+        return res.status(200).json({userId: req.userId})
+    }
 }
 export {UserController}
